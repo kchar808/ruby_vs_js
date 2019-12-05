@@ -108,4 +108,27 @@
 # Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array. 
 # For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
 
+# 1. Write a function that reverses a string. Don’t use the “reverse” method! (Note: you can use the .split(“”) method to convert a string into an array of characters).
 
+# string = "reverse"
+# array_of_letters = string.split("")
+# i = array_of_letters.length - 1
+# new_string = ""
+# while i >= 0
+#   new_string << array_of_letters[i]
+#   i = i - 1
+# end
+
+# p new_string
+
+# Write a function that accepts a string and returns the number of times that the letter “a” occurs in it.
+
+string = "lasagna"
+split_string = string.split("")
+count = 0
+split_string.each do |letter|
+  if letter == "a"
+    count += 1
+  end
+end
+p count
