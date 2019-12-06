@@ -23,4 +23,5 @@ function letterA(string) {
   return count;
 }
 
-console.log(letterA("lasaaaaagna"));
+// console.log(letterA("lasaaaaagna"));
+
