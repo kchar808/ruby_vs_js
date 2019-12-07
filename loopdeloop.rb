@@ -130,3 +130,21 @@
 # end
 
 # p flattened
+
+# Use a nested loop to compute the sum of all the numbers in an array of number pairs.
+# For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
+
+numbers = [[1, 3], [8, 9], [2, 16]]
+sum = 0
+i = 0
+while i < numbers.length
+  inner_array = numbers[i]
+  j = 0
+  while j < inner_array.length
+    sum += inner_array[j]
+    j += 1
+  end
+  i += 1
+end
+
+p sum
