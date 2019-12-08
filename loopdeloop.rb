@@ -153,17 +153,39 @@
 # Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
-numbers = [2, 5, 3, 1, 0, 7, 11]
-result = false
+# numbers = [2, 5, 3, 1, 0, 7, 11]
+# result = false
+# i = 0
+# while i < numbers.length
+#   current_number = numbers[i]
+#   j = 0
+#   while j < numbers.length
+#     if i != j
+#       other_number = numbers[j]
+#       if current_number + other_number == 10 && result == false
+#         result = [current_number, other_number]
+#       end
+#     end
+#     j += 1
+#   end
+#   i += 1
+# end
+
+# p result
+
+# Use a nested loop to find the largest product of any two different numbers within a given array.
+# For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
+
+numbers = [5, -2, 1, -9, -7, 2, 6]
 i = 0
+max_product = numbers[0] * numbers[1]
 while i < numbers.length
-  current_number = numbers[i]
   j = 0
   while j < numbers.length
+    other_number = numbers[i] * numbers[j]
     if i != j
-      other_number = numbers[j]
-      if current_number + other_number == 10 && result == false
-        result = [current_number, other_number]
+      if other_number > max_product
+        max_product = other_number
       end
     end
     j += 1
@@ -171,4 +193,4 @@ while i < numbers.length
   i += 1
 end
 
-p result
+p max_product
