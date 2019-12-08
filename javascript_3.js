@@ -24,4 +24,3 @@ function letterA(string) {
 }
 
 // console.log(letterA("lasaaaaagna"));
-

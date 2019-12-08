@@ -134,17 +134,41 @@
 # Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 # For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
 
-numbers = [[1, 3], [8, 9], [2, 16]]
-sum = 0
+# numbers = [[1, 3], [8, 9], [2, 16]]
+# sum = 0
+# i = 0
+# while i < numbers.length
+#   inner_array = numbers[i]
+#   j = 0
+#   while j < inner_array.length
+#     sum += inner_array[j]
+#     j += 1
+#   end
+#   i += 1
+# end
+
+# p sum
+
+
+# Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
+#     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
+
+numbers = [2, 5, 3, 1, 0, 7, 11]
+result = false
 i = 0
 while i < numbers.length
-  inner_array = numbers[i]
+  current_number = numbers[i]
   j = 0
-  while j < inner_array.length
-    sum += inner_array[j]
+  while j < numbers.length
+    if i != j
+      other_number = numbers[j]
+      if current_number + other_number == 10 && result == false
+        result = [current_number, other_number]
+      end
+    end
     j += 1
   end
   i += 1
 end
 
-p sum
+p result
